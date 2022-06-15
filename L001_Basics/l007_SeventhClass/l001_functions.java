@@ -42,8 +42,8 @@ public class l001_functions {
         // printStatement("Hi my name is Rajneesh Kumar");
         // printHelloWorld();
 
-        // int ans = addUserNumber();
-        // System.out.println(ans);
+        int ans = addUserNumber();
+        System.out.println(ans);
 
         int  a = scn.nextInt(), b = scn.nextInt();
         System.out.println(addNumber(a, b));
