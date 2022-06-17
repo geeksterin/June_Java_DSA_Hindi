@@ -11,7 +11,7 @@ public class l001_Pattern {
                 System.out.print("  ");
             }
 
-            for (int cst = 1; cst <= nst; cst++) {  // current star count
+            for (int cst = 1; cst <= nst; cst++) { // current star count
                 System.out.print("* ");
             }
 
@@ -19,12 +19,28 @@ public class l001_Pattern {
             nst++;
             System.out.println();
         }
+    }
+
+    public static void pattern_02(int n) {
+        int nst = n, nsp = 0;
+
+        for (int r = 1; r <= n; r++) {
+            for (int csp = 1; csp <= nsp; csp++)
+                System.out.print("  ");
+
+            for (int cst = 1; cst <= nst; cst++)
+                System.out.print("* ");
+
+            nst--;
+            nsp++;
+            System.out.println();
+        }
 
     }
 
     public static void main(String[] args) {
         int n = scn.nextInt();
-        pattern_01(n);
+        pattern_02(n);
 
     }
 }
