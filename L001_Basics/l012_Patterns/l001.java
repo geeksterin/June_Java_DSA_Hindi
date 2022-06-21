@@ -60,11 +60,11 @@ public class l001 {
             if (r > n / 2 + 1)
                 count = n - r + 1;
 
-            for (int cst = 1; cst <= nst; cst++){
+            for (int cst = 1; cst <= nst; cst++) {
                 System.out.print(count + " ");
-                if(??????){
+                if (cst <= nst / 2) {
                     count++;
-                }else{
+                } else {
                     count--;
                 }
             }
