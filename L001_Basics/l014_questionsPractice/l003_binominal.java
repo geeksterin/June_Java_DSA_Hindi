@@ -10,7 +10,7 @@ public class l003_binominal {
     public static void main(String[] args) {
         int a = scn.nextInt();
         int n = scn.nextInt();
-        System.out.println(binomial(b, n));
+        System.out.println(binomial(a, n));
     }
 
 }
