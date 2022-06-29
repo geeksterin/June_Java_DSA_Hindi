@@ -16,9 +16,14 @@ public class l001_basicArray {
         System.out.println();
     }
 
+    // return index if data found, if not then return -1;
+    public static int findElement(int[] arr, int data) {
+
+    }
+
     public static void main(String[] args) {
         int n = scn.nextInt();
-        int[] arr = new int[n];
+        int[] arr = new int[n]; // int[] arr = {10,20,-40,50,70,90,-89,-56};
         input1D(arr);
         print1D(arr);
     }
