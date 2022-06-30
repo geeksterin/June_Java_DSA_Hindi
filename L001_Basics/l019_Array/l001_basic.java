@@ -71,10 +71,21 @@ public class l001_basic {
         }
     }
 
+    public static int[] inverse(int[] arr) {
+        int n = arr.length;
+        int[] ans = new int[n];
+        for (int i = 0; i < n; i++) {
+            ans[arr[i]] = i;
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
         int n = scn.nextInt();
         int[] arr = new int[n]; // int[] arr = {10,20,-40,50,70,90,-89,-56};
         input1D(arr);
-
+        int[] ans = inverse(arr);
+        print1D(ans);
     }
 }
