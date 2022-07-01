@@ -19,7 +19,23 @@ public class l001_questions {
 
     // A and B are the arrays of digit.
     public static int[] sumOftwoArrays(int[] A, int[] B) {
+        int n = A.length, m = B.length;
+        int len = Math.max(n, m) + 1;
 
+        int[] ans = new int[len];
+        int i = n - 1, j = m - 1, k = len - 1, carry = 0;
+
+        while (i >= 0 || j >= 0 || carry != 0) {
+            int sum = (i >= 0 ? A[i] : 0) + (j >= 0 ? B[j] : 0) + carry;
+            int digit = sum % 10;
+            carry = sum / 10;
+
+            ans[k--] = digit;
+            i--;
+            j--;
+        }
+
+        return ans;
     }
 
     public static void sumOftwoArraysProgram() {
