@@ -22,7 +22,21 @@ public class l001_questions {
 
     }
 
+    public static void sumOftwoArraysProgram() {
+        int n = scn.nextInt();
+        int[] A = new int[n];
+        input1D(A);
+
+        int m = scn.nextInt();
+        int[] B = new int[m];
+        input1D(B);
+
+        int[] ans = sumOftwoArrays(A, B);
+        print1D(ans);
+    }
+
     public static void main(String[] args) {
+        sumOftwoArraysProgram();
 
     }
 
