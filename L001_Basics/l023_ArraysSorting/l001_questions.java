@@ -38,17 +38,21 @@ public class l001_questions {
         }
 
         // for(int i = 0; i < arr.length;i++){
-        //     max = Math.max(max, arr[i]);
-        //     min = Math.min(min, arr[i]);
+        // max = Math.max(max, arr[i]);
+        // min = Math.min(min, arr[i]);
         // }
 
         return max - min;
     }
 
-    public static int countPeakEle(int[] arr){
-        
-
+    public static int countPeakEle(int[] arr) {
+        return 0;
     }
 
+    public static void main(String[] args) {
+        int[] arr = { 2, 67, 23, 34, 123, 4, 5, 6, 7, 8, 9, 20 };
+        System.out.println(findDiffrence_01(arr));
+        System.out.println(findDiffrence_02(arr));
+    }
 
 }
