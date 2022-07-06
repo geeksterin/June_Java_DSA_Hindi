@@ -46,7 +46,53 @@ public class l001_questions {
     }
 
     public static int countPeakEle(int[] arr) {
-        return 0;
+        if (arr.length < 3)
+            return 0;
+
+        int n = arr.length, count = 0;
+        for (int i = 1; i < n - 1; i++) {
+            if (arr[i - 1] < arr[i] && arr[i] > arr[i + 1]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static boolean checkIncreasing(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i])
+                return false;
+        }
+
+        return true;
+    }
+
+    public static boolean checkDecreasing(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] < arr[i])
+                return false;
+        }
+
+        return true;
+    }
+
+    // Leetcode 852
+    public int peakIndexInMountainArray(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i])
+                return i - 1;
+        }
+
+        return arr.length - 1;
+    }
+
+    // HW
+    public static boolean checkMountain(int[] arr) {
+        return false;
+    }
+
+    public static boolean checkArrayisIncreasingSorted(int[] arr) {
+        return false;
     }
 
     public static void main(String[] args) {
