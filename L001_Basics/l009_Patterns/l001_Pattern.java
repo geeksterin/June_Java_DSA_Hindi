@@ -89,13 +89,13 @@ public class l001_Pattern {
     public static void pattern_05_01(int n) {
         int nst = 1, nsp = 2 * n - 2;
         for (int r = 1; r <= n; r++) {
-            for (int cst = 1; cst <= nst1; cst++)
+            for (int cst = 1; cst <= nst; cst++)
                 System.out.print("* ");
 
-            for (int csp = 1; csp <= nsp2; csp++)
+            for (int csp = 1; csp <= nsp; csp++)
                 System.out.print("  ");
 
-            for (int cst = 1; cst <= nst2; cst++)
+            for (int cst = 1; cst <= nst; cst++)
                 System.out.print("* ");
 
             System.out.println();

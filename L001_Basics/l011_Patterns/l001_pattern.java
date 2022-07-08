@@ -99,6 +99,7 @@ public class l001_pattern {
                 nst += 2;
                 nsp--;
             }
+
             System.out.println();
         }
     }

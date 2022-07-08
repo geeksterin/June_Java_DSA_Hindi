@@ -88,4 +88,6 @@ public class l001_basic {
         int[] ans = inverse(arr);
         print1D(ans);
     }
+
+
 }
