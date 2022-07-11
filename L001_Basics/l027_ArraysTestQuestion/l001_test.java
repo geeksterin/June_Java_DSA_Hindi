@@ -34,10 +34,6 @@ public class l001_test {
         }
     }
 
-    public static int maximumPairProduct(){
-        
-    }
-
     public static void UKG_Method_03(int[] arr) {
         int n = arr.length, itr = 0, p = -1, countZeros = 0;
         while (itr < n) {
