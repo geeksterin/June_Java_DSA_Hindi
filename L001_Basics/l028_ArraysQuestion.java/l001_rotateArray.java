@@ -34,6 +34,8 @@ public class l001_rotateArray {
     public static void rotate(int[] arr, int k) {
         int n = arr.length;
         k %= n;
+        if (k < 0)
+            K += n;
 
         reverseInRange(arr, 0, k - 1);
         reverseInRange(arr, k, n - 1);
