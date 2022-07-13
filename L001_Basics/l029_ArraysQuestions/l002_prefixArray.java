@@ -19,7 +19,7 @@ public class l002_prefixArray {
             parr[i + 1] = parr[i] + arr[i];
         }
 
-        int q = scn.nextInt();
+        int q = scn.nextInt(); // 10
         while (q-- > 0) {
             int lr = scn.nextInt(), rr = scn.nextInt();
             int sum = parr[rr + 1] - parr[lr];
@@ -37,7 +37,6 @@ public class l002_prefixArray {
 
     public static void main(String[] args) {
 
-        
         int[] arr = { 4, 6, 8, 9, 7, 10, 12, 13, 16, 17, 22 };
         prefixArray(arr);
     }
