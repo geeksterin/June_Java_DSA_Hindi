@@ -9,20 +9,38 @@ public class l001Question {
         int len = n + m;
         int[] ans = new int[len];
         int i = 0, j = 0, k = 0;
-        while(i < n || j < m){
-
+        while (i < n && j < m) {
+            if (A[i] <= B[j]) {
+                ans[k++] = A[i++];
+            } else {
+                ans[k++] = B[j++];
+            }
         }
 
-        while(i < n){
-
+        while (i < n) {
+            ans[k++] = A[i++];
         }
 
-        while(j < m){
-
+        while (j < m) {
+            ans[k++] = B[j++];
         }
 
         return ans;
 
+    }
+
+    public static void print(int[] arr) {
+        for (int ele : arr)
+            System.out.print(ele + " ");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] A = { -5, -4, -1, 0, 1, 2, 3, 4, 5, 66, 78, 90, 100 };
+        int[] B = { 2, 5, 7, 7 };
+
+        int[] ans = mergeTwoSortedArrays(A, B);
+        print(ans);
     }
 
 }
