@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class l001Question {
+    // O(N+M)
     public static int[] mergeTwoSortedArrays(int[] A, int[] B) {
         int n = A.length, m = B.length;
         if (n == 0 || m == 0)
@@ -33,6 +34,26 @@ public class l001Question {
         for (int ele : arr)
             System.out.print(ele + " ");
         System.out.println();
+    }
+
+    // O(N+M)
+    public static void intersectionOfTwoSortedArrays(int[] A, int[] B) {
+        int n = A.length, m = B.length;
+        if (n == 0 || m == 0)
+            return;
+
+        int i = 0, j = 0;
+        while (i < n && j < m) {
+            if (A[i] == B[j]) {
+                System.out.println(A[i]);
+                i++;
+                j++;
+            } else if (A[i] < B[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
     }
 
     public static void main(String[] args) {
