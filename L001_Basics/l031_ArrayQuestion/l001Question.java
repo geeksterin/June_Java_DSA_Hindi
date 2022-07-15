@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class l001Question {
@@ -27,14 +28,37 @@ public class l001Question {
     }
 
     public static void swap(ArrayList<Integer> arr, int i, int j) {
+        // int temp = arr.get(i);
+        // arr.set(i, arr.get(j));
+        // arr.set(j, temp);
 
+        int vi = arr.get(i);
+        int vj = arr.get(j);
+
+        arr.set(i, vj);
+        arr.set(j, vi);
     }
 
     public static void reverseAL(ArrayList<Integer> arr) {
-
+        int n = arr.size(), i = 0, j = n - 1;
+        while (i < j) {
+            swap(arr, i++, j--);
+        }
     }
 
     public static void bubbleSort(ArrayList<Integer> arr) {
+        int n = arr.size();
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < n - i; j++) {
+                if (arr.get(j - 1) > arr.get(j)) { // arr[j - 1] > arr[j]
+                    swap(arr, j - 1, j);
+                }
+            }
+        }
+    }
+
+    // S: O(1), T: O(n), worstCase Complexity-> bure se bura kya hoskta hai.
+    public static void removeAllEle(ArrayList<Integer> arr, int data){
 
     }
 
