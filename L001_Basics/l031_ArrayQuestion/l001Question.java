@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class l001Question {
@@ -58,7 +57,9 @@ public class l001Question {
     }
 
     // S: O(1), T: O(n), worstCase Complexity-> bure se bura kya hoskta hai.
-    public static void removeAllEle(ArrayList<Integer> arr, int data){
+    // kuch bhi esa kardo jisse shifting naho.
+    // sol-> as you find element swap with last element and delete last element
+    public static void removeAllEle(ArrayList<Integer> arr, int data) {
 
     }
 
