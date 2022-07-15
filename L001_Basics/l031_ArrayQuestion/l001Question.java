@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class l001Question {
@@ -89,6 +90,12 @@ public class l001Question {
 
     public static void main(String[] args) {
         testOfAL();
+        ArrayList<Integer> arr = new ArrayList<>();
+        int[] arr1 = { 10, 2, 3, 4, 565, 5675 };
+        for (int ele : arr1)
+            arr.add(ele);
+            
+        bubbleSort(arr);
 
     }
 }
