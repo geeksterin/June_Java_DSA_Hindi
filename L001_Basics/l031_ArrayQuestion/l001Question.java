@@ -26,6 +26,18 @@ public class l001Question {
         return arr;
     }
 
+    public static void swap(ArrayList<Integer> arr, int i, int j) {
+
+    }
+
+    public static void reverseAL(ArrayList<Integer> arr) {
+
+    }
+
+    public static void bubbleSort(ArrayList<Integer> arr) {
+
+    }
+
     public static void testOfAL() {
         ArrayList<Integer> al = new ArrayList<>();
         int n = scn.nextInt();
