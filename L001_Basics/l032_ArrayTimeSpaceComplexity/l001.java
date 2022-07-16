@@ -45,7 +45,13 @@ public class l001 {
 
     // 1732
     public int largestAltitude(int[] gain) {
-
+        int sum = 0;
+        int ans = 0;
+        for(int ele : gain){
+            sum += ele;
+            ans = Math.max(ans,sum);
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
