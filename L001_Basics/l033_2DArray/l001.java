@@ -29,11 +29,42 @@ public class l001 {
         }
     }
 
+    public static void print1D(int[] arr) {
+        for (int ele : arr) {
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+
     public static void print2D(int[][] arr) {
+        // int n = arr.length, m = arr[0].length;
+        // for (int i = 0; i < n; i++) {
+        // for (int j = 0; j < m; j++) {
+        // System.out.print(arr[i][j] + " ");
+        // }
+        // System.out.println();
+        // }
+
+        for (int[] ar : arr) {
+            print1D(ar);
+        }
 
     }
 
     public static void input2D(int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = scn.nextInt();
+            }
+        }
+    }
+
+    public static void print4D(int[][][][] arr) {
+
+    }
+
+    public static void input4D(int[][][][] arr) {
 
     }
 
@@ -43,5 +74,9 @@ public class l001 {
         input2D(arr);
         print2D(arr);
         test();
+
+        int[][][][] arr1 = new int[scn.nextInt()][scn.nextInt()][scn.nextInt()][scn.nextInt()];
+        input4D(arr1);
+        print4D(arr1);
     }
 }
