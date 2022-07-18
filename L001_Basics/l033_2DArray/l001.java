@@ -38,6 +38,10 @@ public class l001 {
     }
 
     public static void main(String[] args) {
+        int n = scn.nextInt(), m = scn.nextInt();
+        int[][] arr = new int[n][m];
+        input2D(arr);
+        print2D(arr);
         test();
     }
 }
