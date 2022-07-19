@@ -85,13 +85,23 @@ public class l001 {
     // two matrix of same dimension
     // m1 += m2;
     public static void addTwoMatrix(int[][] m1, int[][] m2) {
-
+        int n = m1.length, m = m1[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                m1[i][j] += m2[i][j];
+            }
+        }
     }
 
     // two matrix of same dimension
     // m1 -= m2;
     public static void subtractTwoMatrix(int[][] m1, int[][] m2) {
-
+        int n = m1.length, m = m1[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                m1[i][j] -= m2[i][j];
+            }
+        }
     }
 
     public static void twoMatrixQuestions() {
@@ -108,6 +118,8 @@ public class l001 {
         // System.out.println(maximum(arr));
         // System.out.println(minimum(arr));
         // System.out.println(sumOfAllElements(arr));
+
+        twoMatrixQuestions();
 
     }
 
