@@ -55,15 +55,21 @@ public class l001 {
 
     }
 
-    public static void printDiagonal(int[][] matrix){
-
+    // T: min(n,m)
+    public static void printDiagonal(int[][] matrix) {
+        int n = matrix.length, m = matrix[0].length;
+        int i = 0, j = 0;
+        while (i < n && j < m) {
+            System.out.println(matrix[i][j] + " ");
+            i++;
+            j++;
+        }
     }
 
-    public static void addTwoMatrix(int[][] m1,int[][] m2){
-
+    // two matrix of same dimension
+    // m1 += m2;
+    public static void addTwoMatrix(int[][] m1, int[][] m2) {
     }
-
-     
 
     public static void main(String[] args) {
         int n = scn.nextInt(), m = scn.nextInt();
