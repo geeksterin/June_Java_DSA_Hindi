@@ -4,6 +4,15 @@ public class l001 {
 
     public static Scanner scn = new Scanner(System.in);
 
+    public static void input2d(int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = scn.nextInt();
+            }
+        }
+    }
+
     public static boolean find(int[][] arr, int data) {
         int n = arr.length, m = arr[0].length;
         for (int i = 0; i < n; i++) {
@@ -46,14 +55,15 @@ public class l001 {
 
     }
 
-    public static void input2d(int[][] arr) {
-        int n = arr.length, m = arr[0].length;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                arr[i][j] = scn.nextInt();
-            }
-        }
+    public static void printDiagonal(int[][] matrix){
+
     }
+
+    public static void addTwoMatrix(int[][] m1,int[][] m2){
+
+    }
+
+     
 
     public static void main(String[] args) {
         int n = scn.nextInt(), m = scn.nextInt();
