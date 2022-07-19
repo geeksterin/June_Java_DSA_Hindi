@@ -4,13 +4,29 @@ public class l001 {
 
     public static Scanner scn = new Scanner(System.in);
 
-    public static void input2d(int[][] arr) {
-        int n = arr.length, m = arr[0].length;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+    public static int[][] input2d() {
+        int[][] arr = new int[scn.nextInt()][scn.nextInt()];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
                 arr[i][j] = scn.nextInt();
             }
         }
+
+        return arr;
+    }
+
+    public static void print(int[] arr) {
+        for (int ele : arr)
+            System.out.print(ele + " ");
+
+        System.out.println();
+    }
+
+    public static void print2D(int[][] arr) {
+        for (int[] ar : arr)
+            print(ar);
+
+        System.out.println();
     }
 
     public static boolean find(int[][] arr, int data) {
@@ -69,17 +85,30 @@ public class l001 {
     // two matrix of same dimension
     // m1 += m2;
     public static void addTwoMatrix(int[][] m1, int[][] m2) {
+
+    }
+
+    // two matrix of same dimension
+    // m1 -= m2;
+    public static void subtractTwoMatrix(int[][] m1, int[][] m2) {
+
+    }
+
+    public static void twoMatrixQuestions() {
+        int[][] m1 = input2d();
+        int[][] m2 = input2d();
+
+        addTwoMatrix(m1, m2);
+        print2D(m1);
     }
 
     public static void main(String[] args) {
-        int n = scn.nextInt(), m = scn.nextInt();
-        int[][] arr = new int[n][m];
-        input2d(arr);
+        // int[][] arr = input2d();
+        // System.out.println(find(arr, scn.nextInt()));
+        // System.out.println(maximum(arr));
+        // System.out.println(minimum(arr));
+        // System.out.println(sumOfAllElements(arr));
 
-        System.out.println(find(arr, scn.nextInt()));
-        System.out.println(maximum(arr));
-        System.out.println(minimum(arr));
-        System.out.println(sumOfAllElements(arr));
     }
 
 }
