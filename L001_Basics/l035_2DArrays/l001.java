@@ -29,7 +29,8 @@ public class l001 {
         System.out.println();
     }
 
-    public static void swap2D(int[][] arr, int i1, int j1, int i2, int j2) {
+    // (i_1,j_1) -> cell_1, (i_2,j_2) -> cell_2
+    public static void swap2D(int[][] arr, int i_1, int j_1, int i_2, int j_2) {
 
     }
 
