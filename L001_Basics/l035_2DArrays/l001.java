@@ -29,9 +29,13 @@ public class l001 {
         System.out.println();
     }
 
+    public static void swap2D(int[][] arr, int i1, int j1, int i2, int j2) {
+
+    }
+
     // matrix always be a square matrix
-    public static void transpose(int[][] matrix){
-        
+    public static void transpose(int[][] matrix) {
+
     }
 
     public static void main(String[] args) {
