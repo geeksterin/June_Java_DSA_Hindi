@@ -102,7 +102,11 @@ public class l001 {
         int sum = sumOfEle(matrix[0]);
         for (int i = 1; i < n; i++) {
             int temp = sumOfEle(matrix[i]);
+            if (temp != sum)
+                return false;
         }
+
+        return true;
 
     }
 
