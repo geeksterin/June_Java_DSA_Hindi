@@ -96,8 +96,12 @@ public class l001 {
 
     public static boolean equalSum(int[][] matrix) {
         int n = matrix.length;
-        for (int i = 0; i < n; i++) {
-            int sum = sumOfEle(matrix[i]);
+        if (n == 0)
+            return true;
+
+        int sum = sumOfEle(matrix[0]);
+        for (int i = 1; i < n; i++) {
+            int temp = sumOfEle(matrix[i]);
         }
 
     }
