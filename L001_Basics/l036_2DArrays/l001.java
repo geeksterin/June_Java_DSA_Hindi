@@ -86,18 +86,23 @@ public class l001 {
         reverseRowMatrix(matrix);
     }
 
-    public static boolean sameMatrix(int[][] m1, int[][] m2) {
+    public static int sumOfEle(int[] arr) {
+        int sum = 0;
+        for (int ele : arr)
+            sum += ele;
 
+        return sum;
     }
 
     public static boolean equalSum(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n; i++) {
+            int sum = sumOfEle(matrix[i]);
+        }
 
     }
 
     public static void main(String[] args) {
-        int[][] arr = input2d();
-        print2D(arr);
-        clockWise90DegreeRotation(arr);
-        print2D(arr);
+
     }
 }
