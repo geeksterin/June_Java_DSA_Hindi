@@ -19,8 +19,15 @@ public class l001 {
     }
 
     // S: O(1), T: O(n*m)
-    public static boolean matrixSymmetric() {
-        return false;
+    public static boolean matrixSymmetric(int[][] matrix) {
+        int n = matrix.length, m = matrix[0].length;
+        if (n != m)
+            return false;
+
+        
+
+
+        return true;
     }
 
     public static void main(String[] args){
