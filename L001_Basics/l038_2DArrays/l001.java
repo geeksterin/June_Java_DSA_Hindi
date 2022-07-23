@@ -28,6 +28,17 @@ public class l001 {
         }
     }
 
+    public static void binomialPattern(int N) {
+
+        for (int n = 0; n < N; n++) {
+            for(int r = 0; r <= n;r++){
+                
+            }
+
+        }
+
+    }
+
     public static void main(String[] args) {
 
     }
