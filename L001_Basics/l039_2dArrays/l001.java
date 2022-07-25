@@ -38,7 +38,7 @@ public class l001 {
             for (int j = 0; j < ans[0].length; j++) {
                 int res = 0;
                 for (int k = 0; k < m; k++) {
-                    res += A[][] * B[][];
+                    res += A[i][k] * B[k][j];
                 }
                 ans[i][j] = res;
             }
