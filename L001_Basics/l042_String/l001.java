@@ -45,9 +45,15 @@ public class l001 {
     }
 
     public static int countSpace() {
-        String str = <-Input;
-        //jvdskfd sjakfdsj kd sadgsa fdc -> 4
-
+        // jvdskfd sjakfdsj kd sadgsa fdc -> 4
+        String str = scn.nextLine();
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void printAlternateString(String str) {
@@ -55,6 +61,10 @@ public class l001 {
         for (int i = 1; i < n; i += 2) {
             System.out.print(str.charAt(i));
         }
+    }
+
+    public static boolean isMultipleOf3AndPrintAll3LenStrings(String str) {
+
     }
 
     public static void main(String[] args) {
