@@ -40,6 +40,19 @@ public class l001 {
 
     }
 
+    public static int countSpace() {
+        String str = <-Input;
+        //jvdskfd sjakfdsj kd sadgsa fdc -> 4
+
+    }
+
+    public static void printAlternateString(String str) {
+
+    }
+
+
+
+
     public static void main(String[] args) {
 
     }
