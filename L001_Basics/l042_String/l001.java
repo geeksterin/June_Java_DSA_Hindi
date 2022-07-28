@@ -37,6 +37,10 @@ public class l001 {
     }
 
     public static void printReverseString(String str) {
+        int n = str.length();
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(str.charAt(i));
+        }
 
     }
 
@@ -47,11 +51,11 @@ public class l001 {
     }
 
     public static void printAlternateString(String str) {
-
+        int n = str.length();
+        for (int i = 1; i < n; i += 2) {
+            System.out.print(str.charAt(i));
+        }
     }
-
-
-
 
     public static void main(String[] args) {
 
