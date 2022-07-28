@@ -63,7 +63,16 @@ public class l001 {
         }
     }
 
-    public static boolean isMultipleOf3AndPrintAll3LenStrings(String str) {
+    public static void isMultipleOf3AndPrintAll3LenStrings(String str) {
+        int n = str.length();
+        System.out.println((n % 3 == 0 ? "Yes" : "No"));
+
+        int idx = 0;
+        while (n >= 3) {
+            System.out.println(str.substring(idx, idx + 3));
+            idx += 3;
+            n -= 3;
+        }
 
     }
 
