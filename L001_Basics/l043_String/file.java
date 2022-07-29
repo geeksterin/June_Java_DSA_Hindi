@@ -72,4 +72,27 @@ public class file {
         return ans.toString();
     }
 
+    // 520
+    public boolean isCapital(char ch) {
+        return ch >= 'A' && ch <= 'Z';
+    }
+
+    public boolean detectCapitalUse(String str) {
+        int n = str.length(), count = 0;
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            if (isCapital(ch))
+                count++;
+        }
+
+        if (count == n || count == 0)
+            return true;
+        else if (count == 1 && isCapital(str.charAt(0)))
+            return true;
+
+        return false;
+    }
+
+    // 2129
+
 }
