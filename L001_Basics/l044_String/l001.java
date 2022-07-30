@@ -19,7 +19,7 @@ public class l001 {
 
     // "my name is rajneesh", ' ' -> ["my", "name", "is" ,"rajneesh"]
     public static String[] split(String str, char regex_ch) {
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>(); // for whithout arraylist count regex_ch, count + 1 -> string[]
 
         StringBuilder sb = new StringBuilder();
         int n = str.length();
