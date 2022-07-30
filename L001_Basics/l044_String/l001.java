@@ -27,7 +27,8 @@ public class l001 {
             char ch = str.charAt(i);
             if (ch != regex_ch)
                 sb.append(ch);
-            else {
+
+            if (ch == regex_ch || i == n - 1) {
                 list.add(sb.toString());
                 sb = new StringBuilder();
             }
@@ -69,7 +70,7 @@ public class l001 {
     // Leetcode: 2124
 
     public static void main(String[] args) {
-        String[] ans = split("my name is Rajneesh", ' ');
+        String[] ans = split("my name is Rajneesh! hello friends! how are you", ' ');
         for (String s : ans)
             System.out.println(s);
     }
