@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class l001 {
 
     public String toLowerCase(String str) {
@@ -15,8 +17,28 @@ public class l001 {
         return ans.toString(); // O(n)
     }
 
-    public static String[] split(String str, String regex) {
-        return new String[0];
+    // "my name is rajneesh", ' ' -> ["my", "name", "is" ,"rajneesh"]
+    public static String[] split(String str, char regex_ch) {
+        ArrayList<String> list = new ArrayList<>();
+
+        StringBuilder sb = new StringBuilder();
+        int n = str.length();
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            if (ch != regex_ch)
+                sb.append(ch);
+            else {
+                list.add(sb.toString());
+                sb = new StringBuilder();
+            }
+        }
+
+        String[] ans = new String[list.size()];
+        int i = 0;
+        for (String s : list)
+            ans[i++] = s;
+
+        return ans;
     }
 
     // 2129
@@ -24,16 +46,32 @@ public class l001 {
         String[] arr = title.split(" ");
         StringBuilder ans = new StringBuilder();
 
-        for (int i = 0; i < arr.length; i++) {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
             String str = arr[i];
-            if (str.length() <= 1)
-                ans.append(toLowerCase(str) + " ");
+            if (str.length() <= 2)
+                ans.append(toLowerCase(str));
             else {
+                char ch = str.charAt(0);
+                if (ch >= 'a' && ch <= 'z')
+                    ch = (char) (ch - 'a' + 'A');
 
+                ans.append(ch + toLowerCase(str.substring(1)));
             }
+
+            if (i != n - 1)
+                ans.append(" ");
         }
 
         return ans.toString();
+    }
+
+    // Leetcode: 2124
+
+    public static void main(String[] args) {
+        String[] ans = split("my name is Rajneesh", ' ');
+        for (String s : ans)
+            System.out.println(s);
     }
 
 }
