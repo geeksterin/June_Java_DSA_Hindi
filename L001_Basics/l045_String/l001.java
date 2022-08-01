@@ -50,6 +50,19 @@ public class l001 {
 
     public static String reverseStatement_02(String str) {
         String[] arr = str.split(" ");
+        reverseStringsArray(arr);
 
+        int n = arr.length;
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < n; i++) {
+            String nStr = reverseString(arr[i]);
+
+            sb.append(nStr);
+            if (i != n - 1)
+                sb.append(" ");
+        }
+
+        return sb.toString();
     }
 }
