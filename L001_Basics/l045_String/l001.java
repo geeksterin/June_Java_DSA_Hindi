@@ -65,4 +65,18 @@ public class l001 {
 
         return sb.toString();
     }
+
+    public static void freqArray(String str) {
+        int[] fArr = new int[129];
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            fArr[ch] = fArr[ch] + 1; // ch -> int (ASCII)
+        }
+
+        for (int i = 'A'; i <= 'Z'; i++) {
+            System.out.println((char) i + " -> " + fArr[i]);
+        }
+    }
+
 }
