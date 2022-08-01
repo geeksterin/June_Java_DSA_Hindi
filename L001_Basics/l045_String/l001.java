@@ -67,7 +67,7 @@ public class l001 {
     }
 
     public static void freqArray(String str) {
-        int[] fArr = new int[129];
+        int[] fArr = new int[128 + 1];
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
