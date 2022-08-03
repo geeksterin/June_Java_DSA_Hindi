@@ -45,8 +45,19 @@ public class file {
     }
 
     // String contains only and only numbers from 0 to 9, and len <= 9
+    // "234" -> 234
     public static int parseStringIntoInteger(String str) {
+        int pow = 1, res = 0;
+        for (int i = str.length() - 1; i >= 0; i--) {
+            char ch = str.charAt(i);
+            int d = ch - '0';
 
+            res = d * pow + res;
+            pow *= 10;
+        }
+
+        // return Integer.parseInt(str);
+        return res;
     }
 
     // 1. each charachter should exist in both string.
