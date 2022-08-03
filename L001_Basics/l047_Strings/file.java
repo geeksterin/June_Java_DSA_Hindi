@@ -4,7 +4,7 @@ public class file {
     public static boolean isBalanced(String str) {
         int n = str.length();
         int mid = (0 + n - 1) / 2;
-        int i = n % 2 == 0 ? mid : mid - 1;
+        int i = n % 2 == 0 ? mid : mid - 1; // if len is even than mid otherwise mid - 1
         int j = mid + 1;
 
         int sum1 = 0, sum2 = 0;
@@ -31,11 +31,28 @@ public class file {
 
     // string contains any charchter that exist in physical universe
     public static boolean isPlaindrome(String str) {
+        int n = str.length(), i = 0, j = n - 1;
+        while (i < j) {
+            char ch1 = str.charAt(i++);
+            char ch2 = str.charAt(j--);
 
+            if (ch1 != ch2)
+                return false;
+
+        }
+
+        return true;
     }
 
     // String contains only and only numbers from 0 to 9, and len <= 9
     public static int parseStringIntoInteger(String str) {
+
+    }
+
+    // 1. each charachter should exist in both string.
+    // 2. frequency of each character should be same in both string
+    // 3. order of characters dosen't matter.
+    public static boolean isAnagram(String str1, String str2) {
 
     }
 
