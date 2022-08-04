@@ -43,6 +43,7 @@ public class q002_panagram {
     // indices) between two vowels in a string.
 
     // small alphabets are only present in string
+    // "rajneshgeekster"
     public static void absoluteDiff(String str) {
         int maximum = -1;
         int minimum = 10000000;
