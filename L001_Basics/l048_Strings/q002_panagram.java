@@ -47,13 +47,39 @@ public class q002_panagram {
         int maximum = -1;
         int minimum = 10000000;
 
-       
+        int count = 0;
+        int idx1 = -1, prevIdx = -10000000, n = str.length();
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            if (isVowel(ch)) {
+                if (idx1 == -1) {
+                    idx1 = i;
+                }
+
+                maximum = Math.max(maximum, i - idx1);
+                minimum = Math.min(minimum, i - prevIdx);
+
+                prevIdx = i;
+                count++;
+            }
         }
 
-        // code
+        if (count > 1) {
+            System.out.println("maximum diff: " + maximum);
+            System.out.println("minimum diff: " + minimum);
+        } else {
+            System.out.println("No Answer exist");
+        }
+    }
 
-        System.out.println("maximum diff: " + maximum);
-        System.out.println("minimum diff: " + minimum);
+    // str will a sorted String, ex: "aaabbbccdddeeghijjj" -> "abcdeghij"
+    public static String removeAllDuplicates(String str) {
+
+    }
+
+    // str will a sorted String, ex: "aaabbbccdddeeghijjj" -> "ghi"
+    public static String removeAllDuplicates_02(String str) {
+
     }
 
 }
