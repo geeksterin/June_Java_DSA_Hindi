@@ -1,13 +1,4 @@
 public class q002_panagram {
-    public static String makeString(char ch, int freq) {
-        StringBuilder sb = new StringBuilder();
-        while (freq-- > 0) {
-            sb.append(ch);
-        }
-
-        return sb.toString();
-    }
-
     public static String sortString(String str) {
         int[] freq = new int[128];
         for (int i = 0; i < str.length(); i++)
@@ -16,9 +7,10 @@ public class q002_panagram {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 128; i++) {
             if (freq[i] > 0) {
-                sb.append(makeString((char) i, freq[i]));
+                sb.append((char) i);
             }
         }
+
         return sb.toString();
     }
 
@@ -37,7 +29,14 @@ public class q002_panagram {
 
     // check if string is pangram (Contains all the alphabets at least once)
     public static boolean pangram(String str1, String str2) {
+        String s1 = sortString(str1);
+        String s2 = sortString(str2);
 
+        return isequals(s1, s2);
+    }
+
+    public static boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
     }
 
     // - count the maximum and minimum distance(absolute difference of
@@ -45,9 +44,11 @@ public class q002_panagram {
 
     // small alphabets are only present in string
     public static void absoluteDiff(String str) {
-
         int maximum = -1;
         int minimum = 10000000;
+
+       
+        }
 
         // code
 
