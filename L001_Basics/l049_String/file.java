@@ -115,7 +115,7 @@ public class file {
         return sb.toString();
     }
 
-    public static char firstNonRepeatingCharacter(String str) {
+    public static int firstNonRepeatingCharacter(String str) {
         int[] freq = new int[128];
         StringBuilder sb = new StringBuilder();
 
@@ -125,5 +125,12 @@ public class file {
             freq[ch]++;
         }
 
+        for(int i = 0; i < n;i++){
+            if(freq[i] == 1){
+                return i;
+            }
+        }
+
+        return -1;
     }
 }
