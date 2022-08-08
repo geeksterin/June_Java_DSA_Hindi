@@ -67,4 +67,63 @@ public class file {
 
         return sb.toString();
     }
+
+    public static String compress(String str) {
+        int[] freq = new int[128];
+        StringBuilder sb = new StringBuilder();
+
+        int n = str.length();
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            freq[ch]++;
+        }
+
+        for (int i = 0; i < 128; i++) {
+            if (freq[i] > 0) {
+                sb.append((char) i);
+                if (freq[i] > 1)
+                    sb.append(freq[i]);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static String compress_02(String str) {
+        StringBuilder sb = new StringBuilder();
+        int n = str.length();
+        sb.append(str.charAt(0));
+        int itr = 0, i = 1, equalStream = 0;
+        while (i < n) {
+            int count = 1;
+            while (i < n && sb.charAt(itr) == str.charAt(i)) {
+                i++;
+                count++;
+            }
+
+            if (i < n) {
+                sb.append(str.charAt(i));
+                i++;
+                itr++;
+            }
+
+            if (count > 1) {
+                equalStream++;
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static char firstNonRepeatingCharacter(String str) {
+        int[] freq = new int[128];
+        StringBuilder sb = new StringBuilder();
+
+        int n = str.length();
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            freq[ch]++;
+        }
+
+    }
 }
