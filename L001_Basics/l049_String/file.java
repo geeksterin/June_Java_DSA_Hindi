@@ -25,10 +25,10 @@ public class file {
         StringBuilder sb = new StringBuilder();
         int n = str.length();
         sb.append(str.charAt(0));
-        int itr = 0, i = 1, equalStream = 0;
+        int i = 1, equalStream = 0;
         while (i < n) {
             int count = 1;
-            while (i < n && sb.charAt(itr) == str.charAt(i)) {
+            while (i < n && sb.charAt(sb.length() - 1) == str.charAt(i)) {
                 i++;
                 count++;
             }
@@ -36,7 +36,6 @@ public class file {
             if (i < n) {
                 sb.append(str.charAt(i));
                 i++;
-                itr++;
             }
 
             if (count > 1) {
@@ -93,22 +92,21 @@ public class file {
         StringBuilder sb = new StringBuilder();
         int n = str.length();
         sb.append(str.charAt(0));
-        int itr = 0, i = 1, equalStream = 0;
+        int i = 1;
         while (i < n) {
             int count = 1;
-            while (i < n && sb.charAt(itr) == str.charAt(i)) {
+            while (i < n && sb.charAt(sb.length() - 1) == str.charAt(i)) {
                 i++;
                 count++;
+            }
+
+            if (count > 1) {
+                sb.append(count);
             }
 
             if (i < n) {
                 sb.append(str.charAt(i));
                 i++;
-                itr++;
-            }
-
-            if (count > 1) {
-                equalStream++;
             }
         }
 
@@ -125,12 +123,42 @@ public class file {
             freq[ch]++;
         }
 
-        for(int i = 0; i < n;i++){
-            if(freq[i] == 1){
+        for (int i = 0; i < n; i++) {
+            if (freq[i] == 1) {
                 return i;
             }
         }
 
         return -1;
+    }
+
+    // new set of
+    // questions===============================================================
+
+    public static boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+
+    public static boolean isContainVowel(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (isVowel(str.charAt(i)))
+                return true;
+        }
+
+        return false;
+    }
+
+    public static int countAllNonVowelSubstrings(String str) {
+        int count = 0, n = str.length();
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                String substr = str.substring(i, j + 1);
+                if (isContainVowel(substr) == false) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
     }
 }
